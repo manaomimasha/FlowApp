@@ -138,3 +138,10 @@ textarea {
 border-radius:10px;
 margin-top:3px;
 }
+
+.rounded img, 
+.mind img {
+  max-width: 100%; 
+  height: auto;    
+  display: block;  
+}
