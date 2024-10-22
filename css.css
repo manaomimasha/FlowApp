@@ -23,6 +23,24 @@ grid-area: main;
 margin-left: 15px;
 }
 
+/* rsponsive */
+
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-rows: auto auto; /* Cambiar a filas */
+    grid-template-areas: 
+      "aside"
+      "main";
+  }
+
+  main {
+    margin: 3px; /* Elimina el margen lateral en pantallas pequeñas */
+  }
+}
+
 /* links*/
 a {
 	text-decoration: none;
@@ -32,9 +50,35 @@ a {
   padding: 0 1px;
   color:white;
 }
-button{
+
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;  
+}
+
+.buttons button { 
+  background-color: #1e90ff;    
+  color: white;
+}
+button {
   font-family: "Nunito", sans-serif;
   font-weight:700;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  gap: 8px; 
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button .material-icons {
+  font-size: 20px;                /* Tamaño del icono */
+  vertical-align: middle;
 }
 
 /* searcher */
@@ -89,11 +133,33 @@ border-radius:10px;
 
 nav { 
 margin-top:5px;
+list-style:none;
+}
+
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+ nav { 
+  margin-left: 40%;  
+  
+ }
+/*  
+ .user{
+ display: inline-block;
+ margin-left:30%;  
+ } */
+ .search-container , .user{ 
+ /* margin:3px auto; */  
+ margin-left: 35%
+ }
+
+
 }
 
 .note{ 
 grid-area: note;
 }
+
 
 
 .main-area{ 
@@ -144,4 +210,10 @@ margin-top:3px;
   max-width: 100%; 
   height: auto;    
   display: block;  
+}
+
+.chart-title{
+  text-align: center;
+/*   display: block; 
+  margin:0 auto;  */  
 }
