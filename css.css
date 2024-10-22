@@ -51,13 +51,6 @@ a {
   color:white;
 }
 
-
-.buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;  
-}
-
 .buttons button { 
   background-color: #1e90ff;    
   color: white;
@@ -161,15 +154,36 @@ grid-area: note;
 }
 
 
-
 .main-area{ 
 display: grid;
-grid-template-columns: 1fr 5fr); 
-grid-template-rows: 1fr 2fr); 
+grid-template-columns: 1fr 2fr; 
+grid-template-rows: 1fr 2fr; 
 gap: 10px;
 grid-template-areas: 
 "upload-note rounded" 
 "mind mind";
+}
+/* 
+.main-area{ 
+display: grid;
+grid-template-columns: 30% 70%; 
+grid-template-rows: 20% 80%; 
+gap: 10px;
+grid-template-areas: 
+"upload-note rounded" 
+"mind mind";
+} */
+
+.upload-note .rounded{ 
+
+}
+/* Media query for mobile */
+@media (max-width: 768px) {
+  .main-area{ 
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
 }
 
 .upload-note { 
@@ -203,6 +217,10 @@ textarea {
 .upload-note button{ 
 border-radius:10px;
 margin-top:3px;
+}
+
+.rounded, .mind {
+  overflow: hidden; /* Prevenir que el contenido se desborde */
 }
 
 .rounded img, 
