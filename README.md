@@ -21,6 +21,7 @@ Tasks for children may be depicted as squares.
 
 With Flow, managing tasks and projects becomes more visual and flexible, allowing users to adapt it to their needs and priorities.
 
+----------------------------------------------------
 
 Versión en español: 
 
